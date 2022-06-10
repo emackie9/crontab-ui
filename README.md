@@ -12,6 +12,7 @@ docker run \
     --env TZ=America/Toronto \
     --env BASIC_AUTH_USER=user \
     --env BASIC_AUTH_PWD=SecretPassword \
+    -v /var/run/docker.sock:/var/run/docker.sock \
     -v aws_credentials:/root/.aws \
     -v cron_tabs:/crontab-ui/crontabs \
     -v some_dir_to_sync:/sync_dir \
